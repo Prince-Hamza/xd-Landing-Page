@@ -11,6 +11,7 @@ import darkTheme from '../../images/Landing-Page/darkTheme.png'
 import './styles.css'
 
 export default function Main() {
+
 	return (
 		<div>
 			<div style={styles.Theme} >
