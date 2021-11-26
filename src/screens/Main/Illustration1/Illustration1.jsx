@@ -140,6 +140,7 @@ const styles = ({
         top: '8%',
         width: '55%',
         height: '80%',
+        // transform: 'rotate3d(0, 4, 4, 90deg)'
     },
     headphone: {
         position: 'absolute',

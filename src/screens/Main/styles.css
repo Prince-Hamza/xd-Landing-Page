@@ -25,6 +25,7 @@
   left: 50%;
   width: 50%;
   height: 100%;
+  perspective: 1000px;
   /* border: dashed blue; */
 }
 
