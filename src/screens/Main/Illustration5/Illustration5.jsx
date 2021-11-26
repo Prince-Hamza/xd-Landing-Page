@@ -6,7 +6,7 @@ import Ellipse from '../Ellipse/Ellipse'
 export default function Illustration4() {
     return (
         <div  >
-            <Ellipse top={"480%"} />
+            {/* <Ellipse top={"480%"} /> */}
             <img style={styles.illustrate} src={Illustration} alt={Illustration} />
            
             <img style={styles.brandEllipse} src={yourBrandEllipse} alt={yourBrandEllipse} />

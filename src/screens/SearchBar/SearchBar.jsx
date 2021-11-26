@@ -1,8 +1,7 @@
 
 export default function SearchBar() {
     return (
-        <div style={styles.SearchBar} >
-        </div>
+        <input placeholder={"     Search Here"} style={styles.SearchBar} />
     )
 }
 
@@ -11,12 +10,14 @@ const styles = ({
         position: "absolute",
         top: "3%",
         left: "48%",
-        height: "7%",
+        height: "6%",
         width: "25%",
         borderRadius: "50px",
-        backgroundColor:'white',
-        boxShadow:'0px 0px 8px 1px rgba(230,230,230,1)'       
+        border: "none",
+        backgroundColor: 'white',
+        boxShadow: '0px 0px 8px 1px rgba(230,230,230,1)',
+        font:'italic 18px times new roman'
     },
-    
+
 
 })

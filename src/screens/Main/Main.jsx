@@ -7,19 +7,34 @@ import Illustration5 from './Illustration5/Illustration5'
 
 import shoppingTrolley from '../../images/Landing-Page/shopping-trolley-background.png'
 import darkTheme from '../../images/Landing-Page/darkTheme.png'
-
+import { useEffect } from 'react'
+import $ from 'jquery'
 import './styles.css'
+
+
+
 
 export default function Main() {
 
+
+	useEffect(() => {
+
+		$(`.title`).animate({ opacity: "0" }, 0)
+		$(`.title`).animate({ opacity: "+=25" }, 10000);
+
+
+
+	})
+
+
 	return (
-		<div>
+		<div style={{ width: '100%' }}>
 			<div style={styles.Theme} >
 				<Header />
 
 				<img style={styles.shoppingTrolley} src={shoppingTrolley} alt="" />
 
-				<div style={styles.pageHeading} >
+				<div style={styles.pageHeading} className={"title"} >
 					<p> The Future Of </p>
 					<p>	 Comerce Is Yours </p>
 				</div>
@@ -62,7 +77,8 @@ const styles = ({
 		position: 'absolute',
 		left: '10%',
 		top: '20%',
-		font: 'bold 48px times new roman'
+		font: 'bold 48px times new roman',
+		// display: 'none',
 	},
 	shoppingTrolley: {
 		width: '100%',

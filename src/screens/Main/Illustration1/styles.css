@@ -1,0 +1,35 @@
+
+.illuswrap {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    border: dashed blue;
+}
+
+.textContainer {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    border: dashed cyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: 'center'
+} 
+
+@media screen and (max-width: 450px) {
+    .illuswrap {
+       left:0%;
+       width:100%
+    } 
+    .textContainer {
+      display: none;
+      left:0%;
+      width:100%
+      
+    }
+}

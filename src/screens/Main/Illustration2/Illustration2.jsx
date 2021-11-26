@@ -2,39 +2,108 @@ import Illustration from '../../../images/Landing-Page/Illustration2/secondIllus
 import CardOver from '../../../images/Landing-Page/Illustration2/cardover.png'
 import CardBehind from '../../../images/Landing-Page/Illustration2/cardbehind.png'
 import Elipse from '../Ellipse/Ellipse'
+import '../styles.css'
 
 export default function Illustration2() {
     return (
-        <div>
-            <Elipse top={"223%"} />
-            <img style={styles.illustrate} src={Illustration} alt={Illustration} />
-            <img style={styles.cardBehind} src={CardBehind} alt={CardBehind} />
-            <img style={styles.cardOver} src={CardOver} alt={CardOver} />
+        <div style={styles.secondSection}>
+
+            <div className={"textContainer"}>
+
+                <p style={styles.title} >
+                    Book Services
+                </p>
+
+                <p style={styles.para}>
+                    Locate and schedule your own opportunities with their services in your area
+                </p>
+
+                <div>
+                    <button className={'transparentButton'}>
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+
+            <div className={"illuswrap"}  >
+                <Elipse top={"5%"} left={"5%"} />
+                <img style={styles.illustrate} src={Illustration} alt={Illustration} />
+                <img style={styles.cardBehind} src={CardBehind} alt={CardBehind} />
+                <img style={styles.cardOver} src={CardOver} alt={CardOver} />
+            </div>
+
 
         </div>
     )
 }
 
 const styles = ({
+
+    secondSection: {
+        position: 'absolute',
+        top: '250%',
+        left: '0%',
+        width: '99%',
+        height: '90%',
+        // border: 'dashed white',
+    },
+    illustrationContainer: {
+        position: 'absolute',
+        top: '0%',
+        left: '50%',
+        width: '50%',
+        height: '100%',
+        border: 'dashed blue'
+    },
+    textContainer: {
+        position: 'absolute',
+        top: '0%',
+        left: '0%',
+        width: '50%',
+        height: '100%',
+        border: 'dashed cyan',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     illustrate: {
         position: 'absolute',
-        left: '50%',
-        top: '225%',
-        width: '30%',
-        height: '75%'
+        left: '22%',
+        top: '10%',
+        width: '55%',
+        height: '80%',
     },
     cardBehind: {
         position: 'absolute',
-        left: '81%',
-        top: '250%',
-        width: '10%',
-        height: '26%'
+        left: '80%',
+        top: '36%',
+        width: '22%',
+        height: '28%'
     },
     cardOver: {
         position: 'absolute',
-        left: '52%',
-        top: '240%',
-        width: '13%',
-        height: '21%'
+        left: '26%',
+        top: '28%',
+        width: '24%',
+        height: '23%'
+    },
+
+    title: {
+        color: 'white',
+        font: 'bold 22px times new roman'
+    },
+    para: {
+        color: 'white'
+    },
+    transparentButton: {
+        width: '22%',
+        height: '5%',
+        border: 'solid 0.5px',
+        backgroundColor: 'black',
+        borderRadius: '50px',
+        color: 'white'
     }
+
 })
