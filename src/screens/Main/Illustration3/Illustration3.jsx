@@ -3,25 +3,26 @@ import iphone from '../../../images/Landing-Page/illustration3/iPhone12.png'
 import gamepad from '../../../images/Landing-Page/illustration3/gamepad.png'
 import Ellipse from '../Ellipse/Ellipse'
 import '../styles.css'
+import "./styles.css"
 
 export default function Illustration3() {
     return (
-        <div style={styles.thirdSection}>
+        <div className={"Section"} id={"thirdSection"}>
 
 
-            <div className={"illuswrap"}  >
+            <div className={"illuswrap3"} id={"illusWrap3"}>
 
 
                 <Ellipse top={"5%"} left={"5%"} />
 
-                <img style={styles.illustrate} src={Illustration} alt={Illustration} />
-                <img style={styles.iPhone} src={iphone} alt={iphone} />
-                <img style={styles.gamepad} src={gamepad} alt={gamepad} />
+                <img className={"illustrate"} id={"illustrate2"} src={Illustration} alt={Illustration} />
+                <img id={"iphone"} src={iphone} alt={iphone} />
+                <img id={"gamepad"} src={gamepad} alt={gamepad} />
 
             </div>
 
 
-            <div className={"textContainer"}>
+            <div className={"textContainer3"} id={"textContainer3"}>
 
                 <p style={styles.title} >
                     Enter Raffles
@@ -102,7 +103,9 @@ const styles = ({
         font: 'bold 22px times new roman'
     },
     para: {
-        color: 'white'
+        color: 'white',
+        marginBottom: '7%',
+
     },
     transparentButton: {
         width: '22%',

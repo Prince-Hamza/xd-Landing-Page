@@ -34,9 +34,13 @@ export default function Main() {
 
 				<img style={styles.shoppingTrolley} src={shoppingTrolley} alt="" />
 
-				<div style={styles.pageHeading} className={"title"} >
-					<p> The Future Of </p>
-					<p>	 Comerce Is Yours </p>
+				<div className={"pageHeading"} >
+					<div className={"pageHeadingItem"} >
+						<p> The Future Of </p>
+					</div>
+					<div className={"pageHeadingItem"} >
+						<p>	 Comerce Is Yours </p>
+					</div>
 				</div>
 
 				<p style={styles.subtitle} > A new and improved way to help your brand reach its full potential</p>
@@ -45,7 +49,8 @@ export default function Main() {
 
 
 
-			<img src={darkTheme} style={styles.darkTheme} alt="" />
+			<img src={darkTheme} alt={darkTheme} className={"darkTheme"} />
+
 			<Illustration1 />
 			<Illustration2 />
 			<Illustration3 />
@@ -66,13 +71,13 @@ const styles = ({
 		backgroundColor: "whitesmoke",
 		background: 'rgba(245,245,245,1)'
 	},
-	darkTheme: {
-		position: 'absolute',
-		top: '90%',
-		left: '0%',
-		width: '100%',
-		height: '600%',
-	},
+	// darkTheme: {
+	// 	position: 'absolute',
+	// 	top: '90%',
+	// 	left: '0%',
+	// 	width: '100%',
+	// 	height: '600%',
+	// },
 	pageHeading: {
 		position: 'absolute',
 		left: '10%',

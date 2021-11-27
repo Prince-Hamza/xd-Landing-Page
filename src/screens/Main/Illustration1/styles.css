@@ -1,35 +1,34 @@
-
-.illuswrap {
+#mobileLeft {
     position: absolute;
-    top: 0%;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    border: dashed blue;
+    left: -2.5%;
+    top: 35%;
+    width: 18%;
+    height: 25%
 }
 
-.textContainer {
+#mobileRight {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 50%;
-    height: 100%;
-    border: dashed cyan;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: 'center'
-} 
+    left: 82%;
+    top: 35%;
+    width: 18%;
+    height: 25%;
+}
 
 @media screen and (max-width: 450px) {
-    .illuswrap {
-       left:0%;
-       width:100%
-    } 
-    .textContainer {
-      display: none;
-      left:0%;
-      width:100%
-      
+    #mobileRight {
+        position: absolute;
+        left: 75%;
+        top: 22%;
+        width: 25%;
+        height: 28%;
     }
+
+    #mobileLeft {
+        position: absolute;
+        left: -2.5%;
+        top: 22%;
+        width: 25%;
+        height: 28%
+    }
+
 }

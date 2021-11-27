@@ -1,12 +1,13 @@
 
 export default function SearchBar() {
     return (
-        <input placeholder={"     Search Here"} style={styles.SearchBar} />
+        <input className={"searchBar"} placeholder={"     Search Here"}  />
     )
 }
 
 const styles = ({
     SearchBar: {
+        
         position: "absolute",
         top: "3%",
         left: "48%",

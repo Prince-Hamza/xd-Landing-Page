@@ -5,8 +5,8 @@ import '../styles.css'
 
 export default function Illustration4() {
     return (
-        <div style={styles.thirdSection} >
-            <div className={"textContainer"}>
+        <div className={"Section"} id={"fourthSection"}>
+            <div className={"textContainer"} id={"textContainer4"}>
 
                 <p style={styles.title} >
                     Contact Us
@@ -23,15 +23,13 @@ export default function Illustration4() {
                     </button>
                 </div>
 
-
-
             </div>
 
 
-            <div className={"illuswrap"}  >
+            <div className={"illuswrap"} id={"illusWrap4"}>
 
                 <Ellipse top={"5%"} left={"5%"} />
-                <img style={styles.illustrate} src={Illustration} alt={Illustration} />
+                <img className={"illustrate"} id={"illustrate4"} src={Illustration} alt={Illustration} />
 
             </div>
 
@@ -86,7 +84,9 @@ const styles = ({
         font: 'bold 22px times new roman'
     },
     para: {
-        color: 'white'
+        color: 'white',
+        marginBottom: '7%'
+
     },
     transparentButton: {
         width: '22%',

@@ -1,0 +1,11 @@
+@media screen and (max-width: 450px) {
+    
+    #illusWrap1 {
+        top: 0%;
+        height:75%
+    }
+    #textContainer1{
+        top:50%;
+        height:25%
+    }
+}

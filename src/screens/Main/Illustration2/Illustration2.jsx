@@ -3,12 +3,13 @@ import CardOver from '../../../images/Landing-Page/Illustration2/cardover.png'
 import CardBehind from '../../../images/Landing-Page/Illustration2/cardbehind.png'
 import Elipse from '../Ellipse/Ellipse'
 import '../styles.css'
+import './styles.css'
 
 export default function Illustration2() {
     return (
-        <div style={styles.secondSection}>
+        <div className={"Section"} id={"secondSection"} >
 
-            <div className={"textContainer"}>
+            <div className={"textContainer"} id={"textContainer2"}>
 
                 <p style={styles.title} >
                     Book Services
@@ -26,11 +27,11 @@ export default function Illustration2() {
 
             </div>
 
-            <div className={"illuswrap"}  >
+            <div className={"illuswrap"} id={"illusWrap2"} >
                 <Elipse top={"5%"} left={"5%"} />
-                <img style={styles.illustrate} src={Illustration} alt={Illustration} />
-                <img style={styles.cardBehind} src={CardBehind} alt={CardBehind} />
-                <img style={styles.cardOver} src={CardOver} alt={CardOver} />
+                <img className={"illustrate"} id={"illustrate2"} src={Illustration} alt={Illustration} />
+                <img id="cardBehind" src={CardBehind} alt={CardBehind} />
+                <img id="cardOver" src={CardOver} alt={CardOver} />
             </div>
 
 
@@ -95,7 +96,8 @@ const styles = ({
         font: 'bold 22px times new roman'
     },
     para: {
-        color: 'white'
+        color: 'white',
+        marginBottom: '7%'
     },
     transparentButton: {
         width: '22%',

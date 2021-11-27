@@ -7,15 +7,19 @@ import Grid from "@material-ui/core/Grid";
 import { useState, useEffect } from "react";
 import $ from 'jquery'
 import '../styles.css'
+import './styles.css'
+import '../illustrations.css'
 
 export default function Illustration1() {
+
+    const [animages, setAnimages] = useState(imageInfo)
 
     var animateOnce = true
 
     useEffect(() => {
+        mobileAnime()
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100 && animateOnce == true) {
-                // alert(animateOnce)
                 animateOnce = false
                 animation()
             }
@@ -49,9 +53,24 @@ export default function Illustration1() {
         });
     }
 
+    const mobileAnime = () => {
+        if (detectMob()) {
+             setAnimages(mobileImageInfo)
+        }
+    }
+
+    const detectMob = () => {
+
+
+        return toMatch.some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        });
+    }
+
+
     return (
-        <div style={styles.firstSection} >
-            <div className="textContainer"  >
+        <div className={"Section"} id={'firstSection'} >
+            <div className="textContainer" id={"textContainer1"}  >
 
                 <p style={styles.title} >
                     Shop Brand
@@ -71,18 +90,18 @@ export default function Illustration1() {
                 </div>
 
             </div>
-            <div className={"illuswrap"}  >
-                <Ellipse top={"5%"} left={"5%"} />
-                <img style={styles.illustrate} src={Illustration} alt={Illustration} />
+            <div className={"illuswrap"} id={"illusWrap1"}  >
+                <Ellipse id={"Ellipse1"} />
+                <img className={"illustrate"} id={"illustrate1"} src={Illustration} alt={Illustration} />
                 {/* <img style={styles.headphone} src={Headphone} alt={Headphone} /> */}
-                <img style={styles.mobileLeft} src={mobileLeft} alt={mobileLeft} />
-                <img style={styles.mobileRight} src={mobileRight} alt={mobileRight} />
+                <img id={"mobileLeft"} src={mobileLeft} alt={mobileLeft} />
+                <img id={"mobileRight"} src={mobileRight} alt={mobileRight} />
 
                 {/* <img style={styles.mobileLeft} src = {require('../../../images/Landing-Page/illustration1/i1FlexItem2.png').default} /> */}
 
 
                 <div style={styles.imagesFlexbox}>
-                    {imageInfo.map((item) => {
+                    {animages.map((item) => {
                         return (
                             <img id={`flexAnime${item.id}`} style={{
                                 position: item.position,
@@ -112,36 +131,9 @@ const styles = ({
         left: '0%',
         width: '99%',
         height: '90%',
-        // border: 'dashed white',
+        border: 'dashed white',
     },
-    // illustrationContainer: {
-    //     position: 'absolute',
-    //     top: '0%',
-    //     left: '50%',
-    //     width: '50%',
-    //     height: '100%',
-    //     border: 'dashed blue'
-    // },
-    // textContainer: {
-    //     position: 'absolute',
-    //     top: '0%',
-    //     left: '0%',
-    //     width: '50%',
-    //     height: '100%',
-    //     border: 'dashed cyan',
-    //     display: 'flex',
-    //     flexDirection: 'column',
-    //     justifyContent: 'center',
-    //     alignItems: 'center'
-    // },
-    illustrate: {
-        position: 'absolute',
-        left: '22%',
-        top: '8%',
-        width: '55%',
-        height: '80%',
-        // transform: 'rotate3d(0, 4, 4, 90deg)'
-    },
+
     headphone: {
         position: 'absolute',
         left: '57%',
@@ -180,15 +172,16 @@ const styles = ({
         font: 'bold 22px times new roman'
     },
     para: {
-        color: 'white'
+        color: 'white',
+        marginBottom: '7%'
     },
     transparentButton: {
-        border:'none',
+        border: 'none',
         width: '25%',
-        height:'100%'
-        
+        height: '100%'
 
-       
+
+
     }
 
 })
@@ -199,5 +192,22 @@ const imageInfo = [
     { id: 2, urlNum: 2, position: 'absolute', top: '5%', left: '60%', width: '35%', height: '25' },
     { id: 3, urlNum: 3, position: 'absolute', top: '42%', left: '5%', width: '35%', height: '25%' },
     { id: 4, urlNum: 4, position: 'absolute', top: '42%', left: '41%', width: '68%', height: '23%' },
-
 ]
+
+const mobileImageInfo = [
+    { id: 1, urlNum: 2, position: 'absolute', top: '-10%', left: '3%', width: '40%', height: '15%' },
+    { id: 2, urlNum: 2, position: 'absolute', top: '-10%', left: '60%', width: '40%', height: '16' },
+    { id: 3, urlNum: 3, position: 'absolute', top: '17%', left: '5%', width: '40%', height: '20%' },
+    { id: 4, urlNum: 4, position: 'absolute', top: '16%', left: '50%', width: '70%', height: '17%' },
+]
+
+
+const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i
+];

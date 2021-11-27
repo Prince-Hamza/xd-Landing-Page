@@ -1,0 +1,16 @@
+.Ellipse {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 550px;
+    height: 550px;
+    color: white;
+}
+
+@media screen and (max-width: 450px) {
+    .Ellipse {
+        width: 90%;
+        height: 60%;
+    }
+
+}
