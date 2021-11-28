@@ -6,6 +6,8 @@ import Illustration4 from './Illustration4/Illustration4'
 import Illustration5 from './Illustration5/Illustration5'
 
 import shoppingTrolley from '../../images/Landing-Page/shopping-trolley-background.png'
+import border from '../../images/Landing-Page/border.png'
+
 import darkTheme from '../../images/Landing-Page/darkTheme.png'
 import { useEffect } from 'react'
 import $ from 'jquery'
@@ -56,6 +58,11 @@ export default function Main() {
 			<Illustration3 />
 			<Illustration4 />
 			<Illustration5 />
+
+			<img className={"border"} id={"border1"} src={border} alt={border} />
+			<img className={"border"} id={"border2"} src={border} alt={border} />
+			<img className={"border"} id={"border3"} src={border} alt={border} />
+			<img className={"border"} id={"border4"} src={border} alt={border} />
 
 		</div>
 	)

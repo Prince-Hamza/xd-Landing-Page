@@ -7,10 +7,10 @@ export default function Illustration4() {
     return (
         <div className={"Section"} id="fifthSection" >
             {/* <Ellipse top={"480%"} /> */}
-            <img id={"lastIllustrate"} src={Illustration} alt={Illustration} />
+            <img style={styles.illustrate} src={Illustration} alt={Illustration} />
 
             <img id={"yourBrand"} style={styles.brandEllipse} src={yourBrandEllipse} alt={yourBrandEllipse} />
-            {/* <p style={styles.brandText} > Your Brand </p> */}
+            <p style={styles.brandText} > Your Brand </p>
 
 
 
@@ -23,23 +23,23 @@ export default function Illustration4() {
 const styles = ({
     illustrate: {
         position: 'absolute',
-        left: '20%',
-        top: '620%',
-        width: '60%',
-        height: '55%'
+        left: '15%',
+        top: '0%',
+        width: '70%',
+        height: '75%'
     },
     brandEllipse: {
         position: 'absolute',
-        left: '50%',
-        top: '0%',
-        width: '8%',
-        height: '16%'
+        left: '49%',
+        top: '32%',
+        width: '12%',
+        height: '24%'
     },
     brandText: {
         position: 'absolute',
-        left: '50%',
-        top: '620%',
-        font: 'italic 12px times new roman',
+        left: '52%',
+        top: '43%',
+        font: 'italic 16px times new roman',
         color: 'white'
     }
 })

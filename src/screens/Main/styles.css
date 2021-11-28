@@ -67,6 +67,15 @@
   transform: 'rotate3d(0, 4, 4, 90deg)'
 }
 
+.hidIllustrate {
+  position: absolute;
+  top: 9%;
+  left: 99%;
+  width: 26%;
+  height: 80%;
+  transform: 'rotate3d(0, 4, 4, 90deg)';
+}
+
 #illustrate1 {
   top: 8%
 }
@@ -99,12 +108,33 @@
   left: 0%;
   width: 50%;
   height: 100%;
-
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: 'center';
+  align-items: 'center'; */
+
   /* border: dashed red */
+}
+
+
+.title {
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  color: white;
+  font: bold 22px times new roman
+}
+
+.para {
+  position: absolute;
+  left: 3.5%;
+  top: 33%;
+  color: white;
+  margin-bottom: 0%;
+  margin-left: 41%;
+  text-align: left;
+  width: 40%;
+  height: 20;
 }
 
 
@@ -126,21 +156,51 @@
   height: 100%;
   /* border: dashed cyan; */
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: 'center';
+   */
   /* border:dashed red */
 }
 
 .transparentButton {
-  width: 26%;
-  height: 160%;
-  background-color: black;
+  position: absolute;
+  left: 38%;
+  top: 48%;
+  width: 23%;
+  height: 5.5%;
   color: white;
   border-radius: 50px;
   border: solid 0.1px whitesmoke;
-  outline: none
+  outline: none;
+  background: rgb(228, 223, 223);
+  background: linear-gradient(90deg, rgba(228, 223, 223, 0) 0%, rgba(198, 19, 19, 0) 100%);
+  margin-left: 7%;
+}
+
+
+.border {
+  position: absolute;
+  top: 85%;
+  left: -0.2%;
+  width: 100%;
+  height: 100%;
+}
+
+#border2 {
+  top: 224%;
+}
+
+#border3 {
+  left : -2%;
+  top: 320%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#border4{
+  top : 450%
 }
 
 .header {
@@ -181,9 +241,9 @@
 
 .searchBar {
   position: absolute;
-  top: 3%;
-  left: 48%;
-  height: 6%;
+  top: 4%;
+  left: 44%;
+  height: 4.5%;
   width: 25%;
   border-radius: 50px;
   border: none;
@@ -250,6 +310,11 @@
     left: 0%;
     width: 100%;
     height: 25%
+  }
+
+  .hidAnime {
+    height: 5%;
+    width: 8%
   }
 
   .illustrate {
@@ -325,5 +390,5 @@
     width: 90%;
     height: 35%
   }
-  
+
 }

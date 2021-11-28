@@ -8,13 +8,16 @@ export default function Illustration4() {
         <div className={"Section"} id={"fourthSection"}>
             <div className={"textContainer"} id={"textContainer4"}>
 
-                <p style={styles.title} >
+                <p className={"title"} >
                     Contact Us
                 </p>
 
-                <p style={styles.para}>
-                    Locate and schedule your own opportunities with their services in your area
-                </p>
+                <div className={"para"} >
+                    <p >
+                        Locate and schedule your own opportunities with their services in your area
+                    </p>
+
+                </div>
 
 
                 <div>
@@ -85,7 +88,9 @@ const styles = ({
     },
     para: {
         color: 'white',
-        marginBottom: '7%'
+        marginBottom: '0%',
+        marginLeft: '30%',
+        textAlign: 'left',
 
     },
     transparentButton: {

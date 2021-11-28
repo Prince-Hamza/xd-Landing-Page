@@ -11,19 +11,28 @@ export default function Illustration2() {
 
             <div className={"textContainer"} id={"textContainer2"}>
 
-                <p style={styles.title} >
-                    Book Services
-                </p>
 
-                <p style={styles.para}>
-                    Locate and schedule your own opportunities with their services in your area
-                </p>
+                <div className={"title"}>
+                    <p  >
+                        Book Services
+                    </p>
+
+                </div>
+
+
+                <div className={"para"}>
+                    <p>
+                        Locate and schedule your own opportunities with their services in your area
+                    </p>
+                </div>
 
                 <div>
                     <button className={'transparentButton'}>
                         Book Now
                     </button>
                 </div>
+
+
 
             </div>
 
@@ -93,11 +102,15 @@ const styles = ({
 
     title: {
         color: 'white',
-        font: 'bold 22px times new roman'
+        font: 'bold 22px times new roman',
+        marginBottom: '0%'
     },
     para: {
         color: 'white',
-        marginBottom: '7%'
+        marginBottom: '0%',
+        marginLeft: '39%',
+        textAlign: 'left',
+        width: '40%'
     },
     transparentButton: {
         width: '22%',

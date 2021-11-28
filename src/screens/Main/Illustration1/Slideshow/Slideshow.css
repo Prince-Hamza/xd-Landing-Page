@@ -1,0 +1,21 @@
+.sliderRoundsContainer {
+    position: absolute;
+    bottom: 7%;
+    right: 16%;
+    width: 20%;
+    height: 5%;
+    /* border: dashed white; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderRounds {
+    color: white;
+    width: 3%;
+    height: 18%;
+    background-color: white;
+    margin-left: 15%;
+    cursor:pointer;
+    border-radius: 50px;
+}

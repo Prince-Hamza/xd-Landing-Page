@@ -22,15 +22,15 @@ export default function Illustration3() {
             </div>
 
 
-            <div className={"textContainer3"} id={"textContainer3"}>
+            <div className={"textContainer3"} >
 
-                <p style={styles.title} >
+                <p className={"title"} >
                     Enter Raffles
                 </p>
 
-                <div>
-                    <p style={styles.para}>
-                        Enter Raffles to win lucky draw
+                <div className={"para"}>
+                    <p >
+                        Win differrent prizes by entering in our lucky draw
                     </p>
                 </div>
 
@@ -104,7 +104,10 @@ const styles = ({
     },
     para: {
         color: 'white',
-        marginBottom: '7%',
+        marginBottom: '0%',
+        marginLeft: '30%',
+        textAlign: 'left',
+        width: '52%'
 
     },
     transparentButton: {
