@@ -1,15 +1,15 @@
+import { useEffect } from 'react'
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from '../Header/Header.jsx'
 import Illustration1 from './Illustration1/Illustration1'
 import Illustration2 from './Illustration2/Illustration2'
 import Illustration3 from './Illustration3/Illustration3'
 import Illustration4 from './Illustration4/Illustration4'
 import Illustration5 from './Illustration5/Illustration5'
-
 import shoppingTrolley from '../../images/Landing-Page/shopping-trolley-background.png'
-import border from '../../images/Landing-Page/border.png'
-
+import border from '../../images/Landing-Page/borderify.png'
 import darkTheme from '../../images/Landing-Page/darkTheme.png'
-import { useEffect } from 'react'
 import $ from 'jquery'
 import './styles.css'
 
@@ -24,14 +24,14 @@ export default function Main() {
 		$(`.title`).animate({ opacity: "0" }, 0)
 		$(`.title`).animate({ opacity: "+=25" }, 10000);
 
-
-
 	})
 
 
 	return (
 		<div style={{ width: '100%' }}>
 			<div style={styles.Theme} >
+
+
 				<Header />
 
 				<img style={styles.shoppingTrolley} src={shoppingTrolley} alt="" />
@@ -48,7 +48,6 @@ export default function Main() {
 				<p style={styles.subtitle} > A new and improved way to help your brand reach its full potential</p>
 
 			</div>
-
 
 
 			<img src={darkTheme} alt={darkTheme} className={"darkTheme"} />

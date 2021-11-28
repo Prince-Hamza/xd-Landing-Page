@@ -1,10 +1,17 @@
 import SearchBar from '../SearchBar/SearchBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import menu from '../../images/Landing-Page/menu.png'
 
 export default function Header() {
     return (
         <div>
-            <FontAwesomeIcon icon={['fas', 'fa-bars']} />
+            <img id={"menu"} src={menu} alt={menu} />
+            <div id={"menuList"} >
+                {ItemsRight.map((item) => {
+                    <h1> {item} </h1>
+                })}
+            </div>
+
             <div className={"header"} >
                 {ItemsLeft.map(item => {
                     return (

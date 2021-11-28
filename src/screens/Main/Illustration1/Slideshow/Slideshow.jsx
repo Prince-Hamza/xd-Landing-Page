@@ -7,21 +7,15 @@ export default function Slideshow() {
     const movefadeOut = (num) => {
 
         if (num == current) {
-            alert("same")
             return
         }   // same number
 
+        
         $(`#${animativeObjectsArray[current]}`).animate({
             left: '-=25%',
             opacity: '-=1'
         }, 1000);
 
-        // num = (num == 0) ? 2 : num
-
-        //if (num == 2) num = -1
-        // alert(`in ${num}`)
-
-        // var next = (num == 2) ? 0 : num
 
         $(`#${animativeObjectsArray[current + 1]}`).animate({ left: "99%", opacity: "1" })
         $(`#${animativeObjectsArray[current + 1]}`).animate({

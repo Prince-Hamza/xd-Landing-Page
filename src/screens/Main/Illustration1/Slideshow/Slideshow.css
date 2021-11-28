@@ -1,21 +1,43 @@
 .sliderRoundsContainer {
     position: absolute;
     bottom: 7%;
-    right: 16%;
-    width: 20%;
+    right: 19%;
+    width: 12%;
     height: 5%;
     /* border: dashed white; */
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1
 }
 
 .sliderRounds {
     color: white;
-    width: 3%;
+    width: 4%;
     height: 18%;
     background-color: white;
     margin-left: 15%;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 50px;
+}
+
+.slideShowEllipse {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top:3%;
+    left: 0%;
+    width: 99%;
+    height: 90%;
+    /* border: dashed white; */
+}
+
+.ssHalf {
+    position: absolute;
+    top: 3%;
+    left: 52.5%;
+    width: 45%;
+    height: 100%;
+    perspective: 1000px;
+    /* border: 'solid white' */
 }

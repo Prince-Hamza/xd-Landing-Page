@@ -30,12 +30,12 @@ export default function Illustration1() {
 
 
     const animation = () => {
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 6; i++) {
             animateItem('+=15px', i, i)
         }
 
         setTimeout(() => {
-            for (let i = 4; i >= 1; i--) {
+            for (let i = 6; i >= 1; i--) {
                 console.log(i)
                 animateItem('-=15px', i, i)
             }
@@ -116,19 +116,23 @@ export default function Illustration1() {
                 </div>
 
 
-
-
-
-
             </div>
 
             <Slideshow />
+{/* 
+            <div className={"slideShowEllipse"} style={{ opacity: '1' }} >
+                <div className={"ssHalf"} >
+                    <Ellipse />
+                </div>
 
-            <div style={{ opacity: '1' }} >
                 <img className={"hidIllustrate"} id={"hid1"} src={Illustration2} alt={Illustration2} />
-            </div>
+            </div> */}
 
-            <div style={{ opacity: '1' }} >
+            <div className={"slideShowMobile"} style={{ opacity: '1' }} >
+                <img className={"hidIllustrate"} id={"hid1"} src={Illustration3} alt={Illustration3} />
+            </div>
+            
+            <div className={"slideShowMobile"} style={{ opacity: '1' }} >
                 <img className={"hidIllustrate"} id={"hid2"} src={Illustration3} alt={Illustration3} />
             </div>
 
