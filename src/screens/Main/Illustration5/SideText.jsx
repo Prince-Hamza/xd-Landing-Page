@@ -1,8 +1,36 @@
-
 import $ from 'jquery'
 import './styles.css'
-
+import { useEffect } from 'react'
 export default function SideText() {
+
+    var animateOnce = true
+
+    useEffect(() => {
+        $(document).ready(() => {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= percentScreen(455) && animateOnce == true) {
+                    animateOnce = false
+                    animateTextContainer(5)
+                }
+            })
+        })
+    })
+
+
+    const percentScreen = (input) => {
+        const onePercent = screen.height / 100
+        return onePercent * input
+    }
+
+    const animateTextContainer = (n) => {
+        // alert($("#fifthSection"))   // 
+        $(`.SideText`).animate({
+            top: "-=10%",
+            opacity: "+=1"
+        })
+    }
+
+
     return (
         <div>
             <div className={"SideText"}>
@@ -54,7 +82,7 @@ const styles = ({
         font: 'bold 18px times new roman'
     },
     paraContainer: {
-      width:'60%'
+        width: '60%'
     },
     paraDesc: {
         font: '14px'

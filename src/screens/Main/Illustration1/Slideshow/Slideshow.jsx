@@ -10,19 +10,36 @@ export default function Slideshow() {
             return
         }   // same number
 
-        
+
         $(`#${animativeObjectsArray[current]}`).animate({
-            left: '-=25%',
-            opacity: '-=1'
-        }, 1000);
+            left: '-=200px',
+            opacity: '-=1',
+            //transform: 'rotateY(-45deg)'
+        }, 100)
+
+        $(`#${animativeObjectsArray[current]}`).addClass('rotate');
 
 
-        $(`#${animativeObjectsArray[current + 1]}`).animate({ left: "99%", opacity: "1" })
-        $(`#${animativeObjectsArray[current + 1]}`).animate({
-            left: '-=37.5%',
-        }, 1000);
+
+        $(`#${animativeObjectsArray[current + 1]}`).css({ display: 'block', opacity: 0 } , 0)
+        $(`#${animativeObjectsArray[current + 1]}`).addClass('rotateIn');
+        $(`#${animativeObjectsArray[current + 1]}`).animate({ opacity: 1 }, 0)
+        $(`#${animativeObjectsArray[current + 1]}`).addClass('rotateInAgain');
+
 
         current = num // pre existing
+
+        // reset 
+
+
+            $(`#${animativeObjectsArray[current + 1]}`).removeClass('rotateInAgain');
+            $(`#${animativeObjectsArray[current]}`).removeClass('rotate');
+
+            animativeObjectsArray.map((item) => {
+                $('#' + item).css({ left: '57%' })
+            })
+
+
 
 
     }
@@ -34,9 +51,10 @@ export default function Slideshow() {
                 <div className={"sliderRounds"} onClick={() => { movefadeOut(1) }} >  </div>
                 <div className={"sliderRounds"} onClick={() => { movefadeOut(2) }} >  </div>
             </div>
+            <div className={"hidCircle"} ></div>
         </div>
     )
 }
 
 
-const animativeObjectsArray = ["illusWrap1", "hid1", "hid2"]
+const animativeObjectsArray = ["illusWrap1", "sm1", "sm2"]

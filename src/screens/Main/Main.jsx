@@ -21,8 +21,17 @@ export default function Main() {
 
 	useEffect(() => {
 
-		$(`.title`).animate({ opacity: "0" }, 0)
-		$(`.title`).animate({ opacity: "+=25" }, 10000);
+
+		$('.pageHeading').animate({
+			left: "+=18%",
+			opacity: "+=1"
+		})
+
+		$('.subtitle').animate({
+			left: "-=30%",
+			opacity: "+=1"
+		})
+
 
 	})
 
@@ -41,11 +50,11 @@ export default function Main() {
 						<p> The Future Of </p>
 					</div>
 					<div className={"pageHeadingItem"} >
-						<p>	 Comerce Is Yours </p>
+						<p>	 Commerce Is Yours </p>
 					</div>
 				</div>
 
-				<p style={styles.subtitle} > A new and improved way to help your brand reach its full potential</p>
+				<p className={"subtitle"} style={styles.subtitle} > A new and improved way to help your brand reach its full potential</p>
 
 			</div>
 
@@ -98,7 +107,8 @@ const styles = ({
 	subtitle: {
 		position: 'absolute',
 		top: '60%',
-		left: '5%'
+		left: '35%',
+		opacity: 0
 	},
 
 })

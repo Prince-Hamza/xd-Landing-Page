@@ -4,8 +4,38 @@ import CardBehind from '../../../images/Landing-Page/Illustration2/cardbehind.pn
 import Elipse from '../Ellipse/Ellipse'
 import '../styles.css'
 import './styles.css'
+import $ from 'jquery'
+import { useEffect } from 'react'
 
 export default function Illustration2() {
+
+    var animateOnce = true
+
+    useEffect(() => {
+        $(document).ready(() => {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= percentScreen(180) && animateOnce == true) {
+                    animateOnce = false
+                    animateTextContainer(2)
+                }
+            })
+        })
+    })
+
+
+    const percentScreen = (input) => {
+        const onePercent = screen.height / 100
+        return onePercent * input
+    }
+
+    const animateTextContainer = (n) => {
+        $(`#textContainer${n}`).animate({
+            top: "-=10%",
+            opacity: "+=1"
+        })
+    }
+
+
     return (
         <div className={"Section"} id={"secondSection"} >
 

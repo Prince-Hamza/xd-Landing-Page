@@ -11,6 +11,7 @@ import '../styles.css'
 import './styles.css'
 import '../illustrations.css'
 import Slideshow from './Slideshow/Slideshow'
+import EllipseSlideshow from '../EllipseSlideshow/Ellipse'
 
 export default function Illustration1() {
 
@@ -20,16 +21,33 @@ export default function Illustration1() {
 
     useEffect(() => {
         mobileAnime()
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100 && animateOnce == true) {
-                animateOnce = false
-                animation()
-            }
-        });
+
+        $(document).ready(() => {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= percentScreen(65) && animateOnce == true) {
+                    animateOnce = false
+                    animateMobileItems()
+                    animateTextContainer(1)
+                }
+            })
+        })
+
+
     })
 
+    const percentScreen = (input) => {
+        const onePercent = screen.height / 100
+        return onePercent * input
+    }
 
-    const animation = () => {
+    const animateTextContainer = (n) => {
+        $(`#textContainer${n}`).animate({
+            top: "-=10%",
+            opacity: "+=1"
+        })
+    }
+
+    const animateMobileItems = () => {
         for (let i = 1; i <= 6; i++) {
             animateItem('+=15px', i, i)
         }
@@ -40,6 +58,7 @@ export default function Illustration1() {
                 animateItem('-=15px', i, i)
             }
         }, 3500)
+
     }
 
     const animateItem = (scale, itemNum, time) => {
@@ -90,6 +109,7 @@ export default function Illustration1() {
                 </button>
 
             </div>
+
             <div className={"illuswrap"} id={"illusWrap1"}  >
                 <Ellipse id={"Ellipse1"} />
                 <img className={"illustrate"} id={"illustrate1"} src={Illustration} alt={Illustration} />
@@ -119,22 +139,23 @@ export default function Illustration1() {
             </div>
 
             <Slideshow />
-{/* 
-            <div className={"slideShowEllipse"} style={{ opacity: '1' }} >
-                <div className={"ssHalf"} >
-                    <Ellipse />
-                </div>
 
+            <div className={"slideShowMobile"} id ={"sm1"} style={{ opacity: '1' }} >
+                <img className={"slideshowMobileLeft"} src={mobileLeft} alt={mobileLeft} />
+                <img className={"slideshowMobileRight"} src={mobileRight} alt={mobileRight} />
+                <EllipseSlideshow />
                 <img className={"hidIllustrate"} id={"hid1"} src={Illustration2} alt={Illustration2} />
-            </div> */}
-
-            <div className={"slideShowMobile"} style={{ opacity: '1' }} >
-                <img className={"hidIllustrate"} id={"hid1"} src={Illustration3} alt={Illustration3} />
             </div>
-            
-            <div className={"slideShowMobile"} style={{ opacity: '1' }} >
+
+            <div className={"slideShowMobile"} id={"sm2"} style={{ opacity: '1' }}>
+                <img className={"slideshowMobileLeft"} src={mobileLeft} alt={mobileLeft} />
+                <img className={"slideshowMobileRight"} src={mobileRight} alt={mobileRight} />
+                <EllipseSlideshow />
                 <img className={"hidIllustrate"} id={"hid2"} src={Illustration3} alt={Illustration3} />
             </div>
+
+
+
 
         </div>
     )
@@ -223,6 +244,8 @@ const mobileImageInfo = [
     { id: 4, urlNum: 4, position: 'absolute', top: '16%', left: '50%', width: '70%', height: '17%' },
 ]
 
+
+const illusZones = [1, 2, 3]
 
 const toMatch = [
     /Android/i,

@@ -1,0 +1,18 @@
+.slideEllipse {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    width: 54%;
+    height: 60%;
+    color: white;
+}
+
+@media screen and (max-width: 450px) {
+    .slideEllipse {
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 58%;
+    }
+
+}

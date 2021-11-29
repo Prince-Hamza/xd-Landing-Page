@@ -30,12 +30,14 @@
   left: 0%;
   width: 99%;
   height: 90%;
+  z-index: 1;
   /* border: dashed white; */
 }
 
 
 #firstSection {
   top: 113%;
+  perspective: 1000px;
 }
 
 #secondSection {
@@ -51,11 +53,9 @@
 }
 
 #fifthSection {
-  top: 610%
+  top: 610%;
+
 }
-
-
-
 
 .illuswrap {
   position: absolute;
@@ -63,8 +63,23 @@
   left: 50%;
   width: 50%;
   height: 100%;
-  perspective: 1000px;
+  /* transform: rotateY(0deg); */
+
+  transition: all 3500ms ease;
+
   /* border: dashed blue; */
+}
+
+.rotate {
+  transform: rotateY(-90deg)
+}
+
+.rotateIn {
+  transform: rotateY(-180deg)
+}
+
+.rotateInAgain {
+  transform: rotateY(-360deg)
 }
 
 .illustrate {
@@ -72,17 +87,20 @@
   left: 22%;
   width: 55%;
   height: 80%;
-  transform: 'rotate3d(0, 4, 4, 90deg)'
+  /* transform: 'rotate3d(0, 4, 4, 90deg)' */
+  /* transform: rotateY(-45deg); */
+
 }
 
 .hidIllustrate {
   position: absolute;
   top: 9%;
-  left: 99%;
-  width: 26%;
-  height: 80%;
-  transform: 'rotate3d(0, 4, 4, 90deg)';
+  left: 10%;
+  width: 48.5%;
+  height: 79.5%;
+  /* transform: 'rotate3d(0, 4, 4, 90deg)'; */
 }
+
 
 #illustrate1 {
   top: 8%
@@ -112,10 +130,11 @@
 
 .textContainer {
   position: absolute;
-  top: 0%;
+  top: 10%;
   left: 0%;
   width: 50%;
   height: 100%;
+  opacity: 0;
   /* display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,18 +177,12 @@
 
 .textContainer3 {
   position: absolute;
-  top: 0%;
+  top: 10%;
   left: 50%;
   width: 50%;
   height: 100%;
+  opacity: 0;
   /* border: dashed cyan; */
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: 'center';
-   */
-  /* border:dashed red */
 }
 
 .transparentButton {
@@ -268,10 +281,11 @@
 
 .pageHeading {
   position: absolute;
-  left: 10%;
+  left: -10%;
   top: 20%;
   font: bold 48px times new roman;
-  /* border: dashed black */
+  opacity: 0;
+  /* border: dashed black; */
 }
 
 
@@ -302,9 +316,9 @@
     position: absolute;
     left: 0%;
     top: 0%;
-    width : 50%;
-    height:50%;
-    border:'solid'
+    width: 50%;
+    height: 50%;
+    border: 'solid'
 
   }
 
@@ -330,7 +344,10 @@
   }
 
   #fifthSection {
-    top: 621%
+    top: 621%;
+    left: -40%;
+    width: 145%;
+    height: 60%
   }
 
   .illuswrap, .illuswrap3 {
@@ -340,8 +357,12 @@
     height: 75%;
   }
 
+  .border {
+    display: none;
+  }
+
   .textContainer, .textContainer3 {
-    top: 50%;
+    top: 60%;
     left: 0%;
     width: 100%;
     height: 25%;

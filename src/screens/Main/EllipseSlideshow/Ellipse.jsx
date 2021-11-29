@@ -2,10 +2,10 @@ import Illustration from '../../../images/Landing-Page/illustration1/full length
 import ellipse from '../../../images/Landing-Page/Ellipse.png'
 import './styles.css'
 
-export default function Elipse(props) {
+export default function EllipseSlideshow(props) {
     return (
         <div>
-            <img className={"Ellipse"}
+            <img className={"slideEllipse"}
                 src={ellipse}
                 alt={ellipse} />
         </div>

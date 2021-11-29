@@ -1,9 +1,37 @@
 import Illustration from '../../../images/Landing-Page/illustration4/illustration.png'
-
 import Ellipse from '../Ellipse/Ellipse'
 import '../styles.css'
+import $ from 'jquery'
+import { useEffect } from 'react'
 
 export default function Illustration4() {
+
+    var animateOnce = true
+
+    useEffect(() => {
+        $(document).ready(() => {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= percentScreen(390) && animateOnce == true) {
+                    animateOnce = false
+                    animateTextContainer(4)
+                }
+            })
+        })
+    })
+
+
+    const percentScreen = (input) => {
+        const onePercent = screen.height / 100
+        return onePercent * input
+    }
+
+    const animateTextContainer = (n) => {
+        $(`#textContainer${n}`).animate({
+            top: "-=10%",
+            opacity: "+=1"
+        })
+    }
+
     return (
         <div className={"Section"} id={"fourthSection"}>
             <div className={"textContainer"} id={"textContainer4"}>

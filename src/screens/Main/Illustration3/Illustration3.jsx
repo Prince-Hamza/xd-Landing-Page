@@ -2,10 +2,39 @@ import Illustration from '../../../images/Landing-Page/illustration3/illustratio
 import iphone from '../../../images/Landing-Page/illustration3/iPhone12.png'
 import gamepad from '../../../images/Landing-Page/illustration3/gamepad.png'
 import Ellipse from '../Ellipse/Ellipse'
+import { useEffect } from 'react'
+import $ from 'jquery'
 import '../styles.css'
 import "./styles.css"
 
 export default function Illustration3() {
+
+    var animateOnce = true
+    
+    useEffect(() => {
+        $(document).ready(() => {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= percentScreen(270) && animateOnce == true) {
+                    animateOnce = false
+                    animateTextContainer(3)
+                }
+            })
+        })
+    }) 
+
+
+    const percentScreen = (input) => {
+        const onePercent = screen.height / 100
+        return onePercent * input
+    }
+
+    const animateTextContainer = (n) => {
+        $(`#textContainer${n}`).animate({
+            top: "-=10%",
+            opacity: "+=1"
+        })
+    }
+
     return (
         <div className={"Section"} id={"thirdSection"}>
 
@@ -22,7 +51,7 @@ export default function Illustration3() {
             </div>
 
 
-            <div className={"textContainer3"} >
+            <div className={"textContainer3"} id={"textContainer3"}>
 
                 <p className={"title"} >
                     Enter Raffles

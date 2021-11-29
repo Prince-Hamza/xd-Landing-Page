@@ -3,17 +3,20 @@ import yourBrandEllipse from '../../../images/Landing-Page/illustration5/yourBra
 import Ellipse from '../Ellipse/Ellipse'
 import brandLogo from '../../../images/Landing-Page/illustration5/yourBrandLogo.png'
 import SideText from './SideText'
+import $ from 'jquery'
+import { useEffect } from 'react'
 import '../styles.css'
 
 export default function Illustration5() {
+
+
     return (
         <div>
 
             <SideText />
 
-            <Ellipse />
+            {/* <Ellipse /> */}
             <div className={"Section"} id="fifthSection" >
-                {/* <Ellipse top={"480%"} /> */}
                 <img style={styles.illustrate} src={Illustration} alt={Illustration} />
 
                 <img style={styles.brandEllipse} src={yourBrandEllipse} alt={yourBrandEllipse} />
@@ -21,7 +24,6 @@ export default function Illustration5() {
                 <img style={styles.brandLogo} src={brandLogo} alt={brandLogo} />
 
             </div>
-
 
 
         </div>
