@@ -1,55 +1,46 @@
 import $ from 'jquery'
+import Velocity from 'velocity-animate'
 import './Slideshow.css'
 
 export default function Slideshow() {
 
-    var current = 0
-    const movefadeOut = (num) => {
 
-        if (num == current) {
-            return
-        }   // same number
+    var preExisting = 0
+    const slideShowMotion = (num) => {
+        let $clickedItem = $(`#${animativeObjectsArray[num]}`)
+        let $previousItem = $(`#${animativeObjectsArray[preExisting]}`)
 
 
-        $(`#${animativeObjectsArray[current]}`).animate({
-            left: '-=200px',
+        // preExisting out
+        $previousItem.animate({
+            left: '-=10%',
             opacity: '-=1',
-            //transform: 'rotateY(-45deg)'
-        }, 100)
-
-        $(`#${animativeObjectsArray[current]}`).addClass('rotate');
-
-
-
-        $(`#${animativeObjectsArray[current + 1]}`).css({ display: 'block', opacity: 0 } , 0)
-        $(`#${animativeObjectsArray[current + 1]}`).addClass('rotateIn');
-        $(`#${animativeObjectsArray[current + 1]}`).animate({ opacity: 1 }, 0)
-        $(`#${animativeObjectsArray[current + 1]}`).addClass('rotateInAgain');
-
-
-        current = num // pre existing
-
-        // reset 
-
-
-            $(`#${animativeObjectsArray[current + 1]}`).removeClass('rotateInAgain');
-            $(`#${animativeObjectsArray[current]}`).removeClass('rotate');
-
-            animativeObjectsArray.map((item) => {
-                $('#' + item).css({ left: '57%' })
-            })
+        }, 1000)
+        $previousItem.addClass('leaveMotion')
+        setTimeout(() => { $previousItem.removeClass('leaveMotion') }, 1000)
+        // $clickedItem.velocity({transform: 'rotateY(-45deg)'})
 
 
 
 
+        // this in  , second later
+        setTimeout(() => {
+            $clickedItem.css({ display: 'block', opacity: 0, left: '60%' })
+            $clickedItem.animate({ opacity: '+=1', left: '-=5%' }, 1000)
+            $clickedItem.addClass('revealMotion')
+            setTimeout(() => {$clickedItem.removeClass('revealMotion')},3100)
+        }, 500)
+
+        // set current
+        preExisting = num
     }
 
     return (
         <div>
             <div className={"sliderRoundsContainer"}>
-                <div className={"sliderRounds"} onClick={() => { movefadeOut(0) }} >  </div>
-                <div className={"sliderRounds"} onClick={() => { movefadeOut(1) }} >  </div>
-                <div className={"sliderRounds"} onClick={() => { movefadeOut(2) }} >  </div>
+                <div className={"sliderRounds"} onClick={() => { slideShowMotion(0) }} >  </div>
+                <div className={"sliderRounds"} onClick={() => { slideShowMotion(1) }} >  </div>
+                <div className={"sliderRounds"} onClick={() => { slideShowMotion(2) }} >  </div>
             </div>
             <div className={"hidCircle"} ></div>
         </div>

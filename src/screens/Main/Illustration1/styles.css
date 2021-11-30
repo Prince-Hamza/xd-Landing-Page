@@ -21,7 +21,7 @@
     width: 57%;
     height: 100%;
     perspective: 1000px;
-    transition: all 3500ms ease;
+    /* transition: all 3500ms ease; */
 
     /* border:dashed white */
 }
@@ -58,6 +58,7 @@
 /* #hid1, #hid2 {
     transform: rotateY(45deg)
 } */
+
 
 .slideItem1, .slideItem2 {
     display: none;

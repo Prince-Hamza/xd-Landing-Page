@@ -63,13 +63,13 @@
   left: 50%;
   width: 50%;
   height: 100%;
-  /* transform: rotateY(0deg); */
+  /* transform: rotateY(-45deg); */
 
-  transition: all 3500ms ease;
+  /* transition: all 3500ms ease; */
 
   /* border: dashed blue; */
 }
-
+/* 
 .rotate {
   transform: rotateY(-90deg)
 }
@@ -80,7 +80,7 @@
 
 .rotateInAgain {
   transform: rotateY(-360deg)
-}
+} */
 
 .illustrate {
   position: absolute;

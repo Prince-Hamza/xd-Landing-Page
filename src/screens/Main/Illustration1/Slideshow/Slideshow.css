@@ -1,7 +1,7 @@
 .sliderRoundsContainer {
     position: absolute;
     bottom: 7%;
-    right: 19%;
+    right: 19.5%;
     width: 12%;
     height: 5%;
     /* border: dashed white; */
@@ -50,4 +50,35 @@
     width: 62%;
     height: 60%;
     color: black;
+}
+
+
+@keyframes rotateIn {
+    from {
+        transform: rotateY(55deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+
+@keyframes rotateOut {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(-70deg);
+    }
+}
+
+
+.leaveMotion {
+    animation: rotateOut 2s;
+}
+
+.revealMotion {
+    animation: rotateIn 2s;
 }
