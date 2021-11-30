@@ -26,9 +26,14 @@ export default function Slideshow() {
         // this in  , second later
         setTimeout(() => {
             $clickedItem.css({ display: 'block', opacity: 0, left: '60%' })
-            $clickedItem.animate({ opacity: '+=1', left: '-=5%' }, 1000)
+            if (num !== 0) {
+                $clickedItem.animate({ opacity: '+=1', left: '-=5%' }, 1000)
+            } else {
+                $clickedItem.animate({ opacity: '+=1', left: '-=10%' }, 1000)
+            }
+
             $clickedItem.addClass('revealMotion')
-            setTimeout(() => {$clickedItem.removeClass('revealMotion')},3100)
+            setTimeout(() => { $clickedItem.removeClass('revealMotion') }, 3100)
         }, 500)
 
         // set current
