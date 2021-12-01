@@ -160,6 +160,7 @@ export default function Illustration(props) {
 
             <div className={"illuswrap"} id={"illusWrap1"} style={{ left: props.textRight ? '0%' : '50%' }}  >
                 <Ellipse id={"Ellipse1"} />
+
                 <img className={"illustrate"} id={props.section == "fourthSection" ? "illustrate4" : "illustrate1"} src={props.mobileImage} alt={Illustration1} />
 
 
@@ -180,7 +181,7 @@ export default function Illustration(props) {
 
                 {props.section == "firstSection" &&
                     <div>
-                        <img id = "headphone" style={styles.headphone} src={Headphone} alt={Headphone} />
+                        <img id="headphone" style={styles.headphone} src={Headphone} alt={Headphone} />
                         <img id={"mobileLeft"} src={mobileLeft} alt={mobileLeft} />
                         <img id={"mobileRight"} src={mobileRight} alt={mobileRight} />
                     </div>
@@ -210,16 +211,19 @@ export default function Illustration(props) {
 
             {props.slideshow == true &&
                 <div>
+
                     <Slideshow />
 
                     <div className={"slideShowMobile"} id={"sm1"} style={{ opacity: '1' }} >
                         <img className={"slideshowMobileLeft"} src={mobileLeft} alt={mobileLeft} />
                         <img className={"slideshowMobileRight"} src={mobileRight} alt={mobileRight} />
                         <EllipseSlideshow />
+                        
                         <img className={"hidIllustrate"} id={"hid1"} src={Illustration2} alt={Illustration2} />
+
                     </div>
 
-                    <div className={"slideShowMobile"} id={"sm2"} style={{ opacity: '1' }}>
+                    <div className={"slideShowMobile"} id={"sm2"} style={{ opacity: '1', perspective: '1000px' }}>
                         <img className={"slideshowMobileLeft"} src={mobileLeft} alt={mobileLeft} />
                         <img className={"slideshowMobileRight"} src={mobileRight} alt={mobileRight} />
                         <EllipseSlideshow />

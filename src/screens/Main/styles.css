@@ -41,15 +41,15 @@
 }
 
 #secondSection {
-  top: 250%
+  top: 250%;
 }
 
 #thirdSection {
-  top: 360%
+  top: 360%;
 }
 
 #fourthSection {
-  top: 480%
+  top: 480%;
 }
 
 #fifthSection {
@@ -69,6 +69,7 @@
 
   /* border: dashed blue; */
 }
+
 /* 
 .rotate {
   transform: rotateY(-90deg)
@@ -221,7 +222,7 @@
 
 #border2 {
   top: 234%;
-  left : 1%;
+  left: 1%;
 }
 
 #border3 {
@@ -232,7 +233,7 @@
 }
 
 #border4 {
-  left : 1%;
+  left: 1%;
   top: 466%
 }
 
@@ -332,8 +333,14 @@
     height: 120%
   }
 
+  .slideShowMobile {
+    position: absolute;
+    perspective: 1000px;
+  }
+
   #firstSection {
     top: 113%;
+    perspective: 1000px;
   }
 
   #secondSection {
