@@ -1,0 +1,36 @@
+#iphone {
+    position: absolute;
+    top: 37%;
+    left: 25%;
+    width: 13%;
+    height: 20%;
+}
+
+#gamepad {
+    position: absolute;
+    top: 38%;
+    left: 60%;
+    width: 16%;
+    height: 20%;
+}
+
+
+@media screen and (max-width: 450px) {
+    #iphone {
+        position: absolute;
+        top: 28%;
+        left: 18%;
+        width: 20%;
+        height: 20%
+    }
+
+    #gamepad {
+        position: absolute;
+        left: 58%;
+        top: 25%;
+        width: 28%;
+        height: 23%
+    }
+
+
+}

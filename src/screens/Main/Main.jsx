@@ -2,10 +2,13 @@ import { useEffect } from 'react'
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from '../Header/Header.jsx'
-import Illustration1 from './Illustration1/Illustration1'
-import Illustration2 from './Illustration2/Illustration2'
-import Illustration3 from './Illustration3/Illustration3'
-import Illustration4 from './Illustration4/Illustration4'
+import Illustration from './Illustration1/Illustration'
+
+import mobileImage1 from '../../images/Landing-Page/illustration1/full length mock.png'
+import mobileImage2 from '../../images/Landing-Page/Illustration2/secondIllustration.png'
+import mobileImage3 from '../../images/Landing-Page/illustration3/illustration.png'
+import mobileImage4 from '../../images/Landing-Page/illustration4/illustration.png'
+
 import Illustration5 from './Illustration5/Illustration5'
 import shoppingTrolley from '../../images/Landing-Page/shopping-trolley-background.png'
 import border from '../../images/Landing-Page/borderify.png'
@@ -61,11 +64,22 @@ export default function Main() {
 
 			<img src={darkTheme} alt={darkTheme} className={"darkTheme"} />
 
-			<Illustration1 />
-			<Illustration2 />
-			<Illustration3 />
-			<Illustration4 />
+
+			{illustrationInfo.map((item) => {
+				return (
+					<Illustration
+						section={item.section}
+						slideshow={item.slideshow}
+						textRight={item.textRight}
+						mobileImage={item.mobileImage}
+						text={item.text}
+					/>
+				)
+			})}
+
+
 			<Illustration5 />
+
 
 			<img className={"border"} id={"border1"} src={border} alt={border} />
 			<img className={"border"} id={"border2"} src={border} alt={border} />
@@ -112,3 +126,54 @@ const styles = ({
 	},
 
 })
+
+const illustrationInfo = [
+	{
+		section: "firstSection",
+		slideshow: true,
+		textRight: false,
+		mobileImage: mobileImage1,
+		text: {
+			id: 1,
+			title: "Shop Brand",
+			description: "Explore the hottest brands from growing entrepreneurs within our platform",
+			buttonText: "Explore"
+		}
+	},
+	{
+		section: "secondSection",
+		slideshow: false,
+		textRight: false,
+		mobileImage: mobileImage2,
+		text: {
+			id: 2,
+			title: "Book Services",
+			description: "Locate & schedule your own appointments with the services in your area.",
+			buttonText: "Book Now"
+		}
+	},
+	{
+		section: "thirdSection",
+		slideshow: false,
+		textRight: true,
+		mobileImage: mobileImage3,
+		text: {
+			id: 3,
+			title: "Enter Raffles",
+			description: "Win differrent prizes by entering in our lucky draw",
+			buttonText: "Enter Draw"
+		}
+	},
+	{
+		section: "fourthSection",
+		slideshow: false,
+		textRight: false,
+		mobileImage: mobileImage4,
+		text: {
+			id: 4,
+			title: "Contact Us",
+			description: "Just send us your questions to stay in tune with our products and services",
+			buttonText: "Contact"
+		}
+	}
+]

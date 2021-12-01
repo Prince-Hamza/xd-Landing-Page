@@ -130,7 +130,7 @@
 
 .textContainer {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 0%;
   width: 50%;
   height: 100%;
@@ -177,13 +177,17 @@
 
 .textContainer3 {
   position: absolute;
-  top: 10%;
   left: 50%;
   width: 50%;
   height: 100%;
   opacity: 0;
   /* border: dashed cyan; */
 }
+
+/* #textContainer3 {
+  position: absolute;
+  top: 20%
+} */
 
 .transparentButton {
   position: absolute;
@@ -216,18 +220,20 @@
 }
 
 #border2 {
-  top: 224%;
+  top: 234%;
+  left : 1%;
 }
 
 #border3 {
-  left: -2%;
-  top: 320%;
+  left: -3%;
+  top: 344%;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 #border4 {
-  top: 450%
+  left : 1%;
+  top: 466%
 }
 
 .header {
