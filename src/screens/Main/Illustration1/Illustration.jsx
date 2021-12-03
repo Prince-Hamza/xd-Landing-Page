@@ -11,8 +11,6 @@ import CardOver from '../../../images/Landing-Page/Illustration2/cardover.png'
 import CardBehind from '../../../images/Landing-Page/Illustration2/cardbehind.png'
 import iphone from '../../../images/Landing-Page/illustration3/iPhone12.png'
 import gamepad from '../../../images/Landing-Page/illustration3/gamepad.png'
-
-
 import { useState, useEffect } from "react";
 import $ from 'jquery'
 import '../styles.css'
@@ -187,7 +185,7 @@ export default function Illustration(props) {
 
                 {props.section == "firstSection" &&
                     <div>
-                        <img id="headphone" style={styles.headphone} src={Headphone} alt={Headphone} />
+                        <img id="headphone" src={Headphone} alt={Headphone} />
                         <img id={"mobileLeft"} src={mobileLeft} alt={mobileLeft} />
                         <img id={"mobileRight"} src={mobileRight} alt={mobileRight} />
                     </div>
@@ -226,7 +224,7 @@ export default function Illustration(props) {
                         <EllipseSlideshow />
 
                         <img className={"hidIllustrate"} id={"hid1"} src={Illustration2} alt={Illustration2} />
-
+                        
                     </div>
 
                     <div className={"slideShowMobile"} id={"sm2"} style={{ opacity: '1', perspective: '1000px' }}>
@@ -237,9 +235,6 @@ export default function Illustration(props) {
                     </div>
                 </div>
             }
-
-
-
 
 
         </div>
