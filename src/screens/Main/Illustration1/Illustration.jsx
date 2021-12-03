@@ -47,9 +47,19 @@ export default function Illustration(props) {
                         animateMobileItems()
                         animateTextContainer(1)
                         $(`#headphone`).animate({
-                            width: "+=5%",
-                            height: "+=5%"
+                            width: "-=5%",
+                            height: "-=5%",
+                            left: '+=10%',
+                            top: '+=8%'
                         })
+                        setTimeout(() => {
+                            $(`#headphone`).animate({
+                                width: "+=5%",
+                                height: "+=5%",
+                                left: '-=10%',
+                                top: '-=8%'
+                            })
+                        }, 1500)
 
                     }
                 }
@@ -135,11 +145,7 @@ export default function Illustration(props) {
 
     return (
         <div className={"Section"} id={props.section} >
-            <div className="textContainer" id={`textContainer${props.text.id}`}
-                style={{
-                    left: props.textRight ? '50%' : '0%',
-                    top: props.section == "thirdSection" || props.section == "fourthSection" ? '40%' : '20%'
-                }} >
+            <div className="textContainer" id={`textContainer${props.text.id}`}  >
 
                 <p className={"title"} >
                     {props.text.title}
@@ -158,7 +164,7 @@ export default function Illustration(props) {
 
             </div>
 
-            <div className={"illuswrap"} id={"illusWrap1"} style={{ left: props.textRight ? '0%' : '50%' }}  >
+            <div className={"illuswrap"} id={`illusWrap${props.text.id}`}  >
                 <Ellipse id={"Ellipse1"} />
 
                 <img className={"illustrate"} id={props.section == "fourthSection" ? "illustrate4" : "illustrate1"} src={props.mobileImage} alt={Illustration1} />
@@ -218,7 +224,7 @@ export default function Illustration(props) {
                         <img className={"slideshowMobileLeft"} src={mobileLeft} alt={mobileLeft} />
                         <img className={"slideshowMobileRight"} src={mobileRight} alt={mobileRight} />
                         <EllipseSlideshow />
-                        
+
                         <img className={"hidIllustrate"} id={"hid1"} src={Illustration2} alt={Illustration2} />
 
                     </div>
